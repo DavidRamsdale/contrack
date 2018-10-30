@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
     before_action :add_devise_params, if: :devise_controller?
     def is_recruiter
-       redirect_to('/') if current_user.recruiter == nil
+       redirect_to('/') if current_user.recruiter == nil and current_user.contractor != nil
     end
 
     def add_devise_params
