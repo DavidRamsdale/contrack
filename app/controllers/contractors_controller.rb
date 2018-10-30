@@ -25,7 +25,8 @@ class ContractorsController < ApplicationController
   # POST /contractors.json
   def create
     @contractor = Contractor.new(contractor_params)
-
+    @contractor.user_id = current_user.id
+    
     respond_to do |format|
       if @contractor.save
         format.html { redirect_to @contractor, notice: 'Contractor was successfully created.' }

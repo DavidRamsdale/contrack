@@ -25,7 +25,8 @@ class RecruitersController < ApplicationController
   # POST /recruiters.json
   def create
     @recruiter = Recruiter.new(recruiter_params)
-
+    @recruiter.user_id = current_user.id
+    
     respond_to do |format|
       if @recruiter.save
         format.html { redirect_to @recruiter, notice: 'Recruiter was successfully created.' }

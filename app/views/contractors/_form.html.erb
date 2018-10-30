@@ -12,11 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div class="field">
     <%= form.label :lvl_of_exp %>
     <%= form.number_field :lvl_of_exp %>
   </div>
@@ -68,12 +63,12 @@
 
   <div class="field">
     <%= form.label :photo %>
-    <%= form.text_area :photo %>
+    <%= form.file_field :photo %>
   </div>
 
   <div class="field">
     <%= form.label :cv %>
-    <%= form.text_area :cv %>
+    <%= form.file_field :cv %>
   </div>
 
   <div class="field">
