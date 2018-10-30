@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @contractor.user %>
+</p>
+
+<p>
+  <strong>Lvl of exp:</strong>
+  <%= @contractor.lvl_of_exp %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @contractor.end_date %>
+</p>
+
+<p>
+  <strong>Current role:</strong>
+  <%= @contractor.current_role %>
+</p>
+
+<p>
+  <strong>Current company:</strong>
+  <%= @contractor.current_company %>
+</p>
+
+<p>
+  <strong>Engineer type:</strong>
+  <%= @contractor.engineer_type %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @contractor.city %>
+</p>
+
+<p>
+  <strong>Will move:</strong>
+  <%= @contractor.will_move %>
+</p>
+
+<p>
+  <strong>Pay range:</strong>
+  <%= @contractor.pay_range %>
+</p>
+
+<p>
+  <strong>Pref contract:</strong>
+  <%= @contractor.pref_contract %>
+</p>
+
+<p>
+  <strong>Available now:</strong>
+  <%= @contractor.available_now %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @contractor.photo %>
+</p>
+
+<p>
+  <strong>Cv:</strong>
+  <%= @contractor.cv %>
+</p>
+
+<p>
+  <strong>Linkedin:</strong>
+  <%= @contractor.linkedin %>
+</p>
+
+<p>
+  <strong>Github:</strong>
+  <%= @contractor.github %>
+</p>
+
+<%= link_to 'Edit', edit_contractor_path(@contractor) %> |
+<%= link_to 'Back', contractors_path %>
