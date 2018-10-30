@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::Base
     before_action :add_devise_params, if: :devise_controller?
+    def is_recruiter
+       redirect_to('/') if current_user.recruiter == nil
+    end
 
     def add_devise_params
         devise_parameter_sanitizer.permit(:sign_up, keys: [:full_name, :is_contractor])

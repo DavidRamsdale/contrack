@@ -1,6 +1,6 @@
 class RecruitersController < ApplicationController
   before_action :set_recruiter, only: [:show, :edit, :update, :destroy]
-
+  before_action :is_recruiter, only: [:index, :show, :edit, :new]
   # GET /recruiters
   # GET /recruiters.json
   def index
@@ -26,7 +26,7 @@ class RecruitersController < ApplicationController
   def create
     @recruiter = Recruiter.new(recruiter_params)
     @recruiter.user_id = current_user.id
-    
+
     respond_to do |format|
       if @recruiter.save
         format.html { redirect_to @recruiter, notice: 'Recruiter was successfully created.' }
