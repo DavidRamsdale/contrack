@@ -14,7 +14,13 @@ class ContractorsController < ApplicationController
 
   # GET /contractors/new
   def new
-    @contractor = Contractor.new
+    if current_user.contractor == nil
+      @contractor = Contractor.new
+    else
+      redirect_to "/"
+    end
+  rescue NoMethodError
+    redirect_to "/"
   end
 
   # GET /contractors/1/edit
