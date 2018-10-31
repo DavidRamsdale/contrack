@@ -27,7 +27,7 @@
   <tbody>
     <% @contractors.each do |contractor| %>
       <tr>
-        <td><%= contractor.user %></td>
+        <td><%= contractor.user.full_name %></td>
         <td><%= contractor.lvl_of_exp %></td>
         <td><%= contractor.end_date %></td>
         <td><%= contractor.current_role %></td>
