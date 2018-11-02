@@ -4,8 +4,14 @@ class LanguageUsersController < ApplicationController
     end
 
     def create
-        @language_user = LanguageUser.new(language_params)
-        @language_user.save
+      
+        params[:language_user][:language_id].each do |f|
+            @language_user = LanguageUser.new
+            @language_user.language_id = f
+            @language_user.user_id = current_user.id
+            @language_user.save
+            
+        end
         redirect_to "/"
     end
 

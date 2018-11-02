@@ -1,13 +1,6 @@
 <h1> Hello </h1>
 
-<%= form_with model: language_user, local: true, method: :post do |form|%>
-
-<%=form.label :user_id %>
-<%=form.number_field :user_id%>
-
-<%=form.label :language_id %>
-<%=form.number_field :language_id%>
-
-<%= form.submit "Submit" %>
-
-<%end %>
+<%= form_with model: @language_user, local: true do |f| %>
+  <%= f.collection_check_boxes :language_id, Language.all, :id, :name, include_hidden: false %>
+  <%= f.submit %>
+<% end %>
