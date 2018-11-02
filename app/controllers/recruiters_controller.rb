@@ -1,10 +1,14 @@
 class RecruitersController < ApplicationController
   before_action :set_recruiter, only: [:show, :edit, :update, :destroy]
-  before_action :is_recruiter, only: [:index, :show, :edit, :new]
+  # before_action :is_recruiter, only: [:index, :show, :edit, :new]
+  before_action :has_paid, only: [:index]
   # GET /recruiters
   # GET /recruiters.json
   def index
     @recruiters = Recruiter.all
+  end
+
+  def payment
   end
 
   # GET /recruiters/1
@@ -35,7 +39,7 @@ class RecruitersController < ApplicationController
 
     respond_to do |format|
       if @recruiter.save
-        format.html { redirect_to @recruiter, notice: 'Recruiter was successfully created.' }
+        format.html { redirect_to recruiterpayment_path, notice: 'Recruiter was successfully created.' }
         format.json { render :show, status: :created, location: @recruiter }
       else
         format.html { render :new }
