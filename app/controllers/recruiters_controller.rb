@@ -22,8 +22,7 @@ class RecruitersController < ApplicationController
     rescue NoMethodError
       redirect_to "/"
   end
-
-
+  
   # GET /recruiters/1/edit
   def edit
   end
@@ -78,6 +77,6 @@ class RecruitersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recruiter_params
-      params.require(:recruiter).permit(:user_id, :company)
+      params.require(:recruiter).permit(:user_id, :company, :search)
     end
 end
