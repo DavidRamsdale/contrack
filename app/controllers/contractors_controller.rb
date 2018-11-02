@@ -10,12 +10,14 @@ class ContractorsController < ApplicationController
   # GET /contractors/1
   # GET /contractors/1.json
   def show
+    redirect_to language_users_new_path
   end
 
   # GET /contractors/new
   def new
     if current_user.contractor == nil
       @contractor = Contractor.new
+      # redirect_to language_users_new_path
     else
       redirect_to "/"
     end
