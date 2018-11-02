@@ -1,9 +1,19 @@
 Rails.application.routes.draw do
   
+  get 'languages/new'
+  get 'languages/create'
+  get 'languages/update'
+  get 'languages/edit'
+  get 'languages/destroy'
+  get 'languages/index'
+  get 'languages/show'
+  get 'language_users/new'
+  post 'language_users', to: "language_users#create"
   resources :contractors
   resources :recruiters
   devise_for :users
   root to: "home#index"
+
   post '/process_payment', to: 'home#process_payment', as: 'payment'
   get '/recruiter/payment', to: 'recruiters#payment', as: 'recruiterpayment'
   

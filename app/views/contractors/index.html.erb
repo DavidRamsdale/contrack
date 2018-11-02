@@ -1,55 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Contractors</h1>
+<h1>Your Profile</h1>
 
 <table>
   <thead>
     <tr>
-      <th>User</th>
-      <th>Lvl of exp</th>
+      <th></th>
+      <th>Name</th>
+      <th>Experience Level</th>
       <th>End date</th>
       <th>Current role</th>
       <th>Current company</th>
       <th>Engineer type</th>
       <th>City</th>
-      <th>Will move</th>
       <th>Pay range</th>
-      <th>Pref contract</th>
+      <th>Preferred contract</th>
       <th>Available now</th>
-      <th>Photo</th>
       <th>Cv</th>
-      <th>Linkedin</th>
-      <th>Github</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @contractors.each do |contractor| %>
       <tr>
-        <td><%= contractor.user.full_name %></td>
-        <td><%= contractor.lvl_of_exp %></td>
-        <td><%= contractor.end_date %></td>
-        <td><%= contractor.current_role %></td>
-        <td><%= contractor.current_company %></td>
-        <td><%= contractor.engineer_type %></td>
-        <td><%= contractor.city %></td>
-        <td><%= contractor.will_move %></td>
-        <td><%= contractor.pay_range %></td>
-        <td><%= contractor.pref_contract %></td>
-        <td><%= contractor.available_now %></td>
-        <td><%= contractor.photo %></td>
-        <td><%= contractor.cv %></td>
-        <td><%= contractor.linkedin %></td>
-        <td><%= contractor.github %></td>
-        <td><%= link_to 'Show', contractor %></td>
-        <td><%= link_to 'Edit', edit_contractor_path(contractor) %></td>
-        <td><%= link_to 'Destroy', contractor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= image_tag current_user.contractor.photo_url if current_user.contractor.photo_url %></td>
+        <td><%= current_user.contractor.user.full_name %></td>
+        <td><%= current_user.contractor.lvl_of_exp %></td>
+        <td><%= current_user.contractor.end_date %></td>
+        <td><%= current_user.contractor.current_role %></td>
+        <td><%= current_user.contractor.current_company %></td>
+        <td><%= current_user.contractor.engineer_type %></td>
+        <td><%= current_user.contractor.city %></td>
+        <td><%= current_user.contractor.pay_range %></td>
+        <td><%= current_user.contractor.pref_contract %></td>
+        <td><%= current_user.contractor.available_now %></td>
+        <td><a target="_blank" href="<%=current_user.contractor.cv%>">View CV</a></td>
+        <td><%= current_user.contractor.linkedin %></td>
+        <td><%= current_user.contractor.github %></td>
+        <td><%= link_to 'Edit', edit_contractor_path(current_user.contractor) %></td>
+        <td><%= link_to 'Delete Account', current_user.contractor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Contractor', new_contractor_path %>
