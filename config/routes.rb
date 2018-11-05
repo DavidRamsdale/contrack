@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "home#index"
 
+  post '/search', to: 'search#results', as: 'searchresults'
+  get '/search', to: 'search#results', as: 'searchindex'
+
   post '/process_payment', to: 'home#process_payment', as: 'payment'
   get '/recruiter/payment', to: 'recruiters#payment', as: 'recruiterpayment'
   
