@@ -1,7 +1,10 @@
 <h1>Hey you're on search view results</h1>
-<%= @basic_search.inspect %>
+<%= @basic_search %>
+
 <%= @array %>
 <%= @result %>
+<%= @end%>
+<%= @search_with_date.inspect%>
 <% @end.each do |z| %>
     <%= User.find(z).full_name %>
 <% end %>
