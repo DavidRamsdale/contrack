@@ -1,5 +1,6 @@
 class SearchController < ApplicationController
-  def index
-    @search = Language.where('name LIKE ?', "%#{params[:search]}%")
+  def results
+    byebug
+    @basic_search = Contractor.basic_search(lvl_of_exp: "1")
   end
 end
