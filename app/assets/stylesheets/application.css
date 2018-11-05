@@ -13,8 +13,26 @@
  *= require_tree .
  *= require_self
  */
+ @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 img{
   width: 200px;
   height: 200px;
   border-radius: 50px;
+}
+body{
+  background-color: rgb(114, 169, 206);
+  margin: 0px;
+}
+.intro{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items:center;
+  font-family: Playfair display;
+  font-size: 20px;
+}
+h1{
+  font-size: 36px;
+  margin:20px;
+  margin-bottom: 50px;
 }
