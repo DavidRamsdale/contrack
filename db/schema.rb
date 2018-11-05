@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_02_055404) do
+ActiveRecord::Schema.define(version: 2018_11_05_003706) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2018_11_02_055404) do
     t.string "current_role"
     t.string "current_company"
     t.integer "engineer_type"
-    t.string "city"
+    t.integer "city"
     t.boolean "will_move"
     t.integer "pay_range"
     t.integer "pref_contract"

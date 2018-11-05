@@ -1,5 +1,30 @@
-<%= form_with url: search_index_path, local: true, method: :get do |form| %>
-<h1>Search for:</h1>
-<%=form.text_field :search %>
-<%= form.submit 'Search' %>
-<%end%>
+<h1>Recruiter's Page</h1>
+<%= form_with url: recruiters_path, local: true do |form| %>
+  <%= form.collection_check_boxes :language_id, Language.all, :id, :name, include_hidden: false %>
+  <div class="field">
+    <%= form.label :engineer_type %>
+    <%= form.select :engineer_type, ["Front end", "Back end", "Full stack"] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lvl_of_exp %>
+    <%= form.select :lvl_of_exp, ["Junior", "Mid", "Senior"] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pay_range %>
+    <%= form.select :pay_range, ["0-200", "200-400", "400-600", "600-800", "800-1000", "1000+" ] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pref_contract %>
+    <%= form.select :pref_contract, ["3 months", "6 months", "9 months", "12 months" ] %>
+  </div>
+  <%= form.submit %>
+<% end %>
+
