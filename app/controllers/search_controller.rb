@@ -6,11 +6,21 @@ class SearchController < ApplicationController
     @basic_search = Contractor.basic_search(lvl_of_exp: "#{params[:lvl_of_exp]}", engineer_type: "#{params[:engineer_type]}", city: "#{params[:city]}", pay_range: "#{params[:pay_range]}", pref_contract: "#{params[:pref_contract]}").collect(&:user_id)
     
     # params[:language_id]
-    @array =[]
+    @array = []
     @language_search = params[:language_id]
     @language_search.each do |x|
       @array << Language.find(x).users.pluck(:user_id)
     end
+    @result = @array.inject(:&)
+    @end = @basic_search & @result
+    
+    @end.each do |z|
+      @user = User.find(z) 
+    end
+
+    
+
+
   end
 
 

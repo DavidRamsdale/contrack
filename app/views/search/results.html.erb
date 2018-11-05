@@ -1,3 +1,8 @@
 <h1>Hey you're on search view results</h1>
 <%= @basic_search.inspect %>
-<%= @array.inspect %>
+<%= @array %>
+<%= @result %>
+<% @end.each do |z| %>
+    <%= User.find(z).full_name %>
+<% end %>
+
