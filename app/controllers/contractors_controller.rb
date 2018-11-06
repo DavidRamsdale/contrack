@@ -4,7 +4,9 @@ class ContractorsController < ApplicationController
   # GET /contractors
   # GET /contractors.json
   def index
-    @contractors = Contractor.all
+    if current_user.is_contractor == false
+      redirect_to "/"
+    end
   end
 
   # GET /contractors/1

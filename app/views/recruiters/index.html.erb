@@ -1,6 +1,6 @@
+<div id="recruiter">
 <h1>Recruiter's Page</h1>
 <%= form_with url: searchresults_path, method: :post, local: true do |form| %>
-  <%= form.collection_check_boxes :language_id, Language.all, :id, :name, include_hidden: false %>
   <div class="field">
     <%= form.label :engineer_type %>
     <%= form.select :engineer_type, [["Front end", 0], ["Back end", 1], ["Full stack", 2]] %>
@@ -30,6 +30,8 @@
     <%= form.label :pref_contract %>
     <%= form.select :pref_contract, [["3 months", 0], ["6 months", 1], ["9 months", 2], ["12 months", 3]] %>
   </div>
+  <div id="checkbox"><%= form.collection_check_boxes :language_id, Language.all, :id, :name, include_hidden: false %></div>
   <%= form.submit %>
+  </div>
 <% end %>
 
