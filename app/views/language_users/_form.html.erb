@@ -1,4 +1,4 @@
-<h1> Hello </h1>
+
 
 <%= form_with model: @language_user, local: true do |f| %>
   <%= f.collection_check_boxes :language_id, Language.all, :id, :name, include_hidden: false %>
