@@ -9,6 +9,13 @@
 Language.create([
     { name: "JavaScript"},
     { name: "Ruby"},
-    { name: "Java"}
-    
+    { name: "Java"},
+    { name: "Swift"},
+    { name: "C/C++"},
+    { name: "Python"},
+    { name: "PHP"},
+    { name: "C#"},
+    { name: "Rust"},
+    { name: "HTML",
+    { name: "CSS"},
 ])
