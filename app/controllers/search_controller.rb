@@ -11,6 +11,5 @@ class SearchController < ApplicationController
     @result = @array.inject(:&)
     @end = @search_with_date & @result
   end
-
 end
 
