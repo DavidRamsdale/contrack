@@ -1,17 +1,20 @@
 <div id="recruiter">
 <h1>Recruiter's Page</h1>
 <%= form_with url: searchresults_path, method: :post, local: true do |form| %>
-  <div class="field">
+  <div class="form">
+
+  <div class="card text-white bg-primary mb-3" style="max-width: 12rem;">
     <%= form.label :engineer_type %>
     <%= form.select :engineer_type, [["Front end", 0], ["Back end", 1], ["Full stack", 2]] %>
   </div>
 
-  <div class="field">
+  <div class="card text-white bg-primary mb-3" style="max-width: 12rem;">
     <%= form.label :lvl_of_exp %>
     <%= form.select :lvl_of_exp, [["Junior", 0]  , ["Mid", 1], ["Senior", 2]] %>
   </div>
 
-  <div class="field">
+ 
+  <div class="card text-white bg-primary mb-3" style="max-width: 12rem;">
     <%= form.label :city %>
     <%= form.select :city, [["Sydney", 0], ["Melbourne", 1], ["Brisbane", 2], ["Adelaide", 3], ["Perth", 4], ["Canberra", 5], ["Hobart", 6], ["Darwin", 7]] %>
   </div>
@@ -20,9 +23,11 @@
     <%= form.label :start_date %>
     <%= form.date_field :end_date %>
   </div>
-
-  <div id="checkbox"><%= form.collection_check_boxes :language_id, Language.all, :id, :name, include_hidden: false %></div>
-  <%= form.submit %>
+  </div>
+  <div class="checkbox">
+  <%= form.collection_check_boxes :language_id, Language.all, :id, :name, include_hidden: false %>
+  </div>
+  <%= form.submit "Search Contractors"%>
   </div>
 <% end %>
 

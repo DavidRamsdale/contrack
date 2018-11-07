@@ -1,7 +1,11 @@
 class RecruitersController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_recruiter, only: [:show, :edit, :update, :destroy]
   # before_action :is_recruiter, only: [:index, :show, :edit, :new]
   before_action :has_paid, only: [:index]
+  
+  before_action :validate_recruiter, only: [:show, :edit, :update, :destroy]
+  
   # GET /recruiters
   # GET /recruiters.json
   def index
@@ -23,8 +27,6 @@ class RecruitersController < ApplicationController
       else
         redirect_to "/"
       end
-    rescue NoMethodError
-      redirect_to "/"
   end
   
   # GET /recruiters/1/edit
@@ -82,5 +84,10 @@ class RecruitersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def recruiter_params
       params.require(:recruiter).permit(:user_id, :company, :search)
+    end
+    def validate_recruiter
+      if current_user.is_contractor
+        redirect_to "/"
+      end
     end
 end

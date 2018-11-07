@@ -1,5 +1,7 @@
 class ContractorsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_contractor, only: [:show, :edit, :update, :destroy]
+  before_action :validate_contractor, only: [:show, :edit, :update, :destroy]
 
   # GET /contractors
   # GET /contractors.json
@@ -23,8 +25,6 @@ class ContractorsController < ApplicationController
     else
       redirect_to "/"
     end
-  rescue NoMethodError
-    redirect_to "/"
   end
 
   # GET /contractors/1/edit
@@ -82,5 +82,11 @@ class ContractorsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def contractor_params
       params.require(:contractor).permit(:user_id, :lvl_of_exp, :end_date, :current_role, :current_company, :engineer_type, :city, :will_move, :pay_range, :pref_contract, :available_now, :photo, :cv, :linkedin, :github)
+    end
+
+    def validate_contractor
+      if current_user.is_contractor == false
+        redirect_to "/"
+      end
     end
 end
