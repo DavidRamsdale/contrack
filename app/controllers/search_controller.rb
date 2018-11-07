@@ -13,7 +13,7 @@ class SearchController < ApplicationController
     @end = @search_with_date & @result
     @users = User.where(id: @end)
     @user_contractors = Contractor.where(user_id: @end)
-    byebug
+
   end
 end
 
