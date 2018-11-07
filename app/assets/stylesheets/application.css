@@ -81,3 +81,7 @@ img{
   border-radius: 50%;
   margin-bottom: 30px;
 }
+#end_date{
+color:red;
+font-weight: bold;
+}
