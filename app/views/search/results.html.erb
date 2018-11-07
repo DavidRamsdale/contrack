@@ -21,7 +21,7 @@
 <% @end.each do |z| %>
   <tbody>
       <tr>
-        <td id="border"><%= image_tag User.find(z).contractor.photo_url if User.find(z).contractor.photo_url %></td>
+        <td id="border"><%= image_tag User.find(z).contractor.photo if User.find(z).contractor.photo %></td>
         <td id="border"><%= User.find(z).full_name %></td>
         <td id="border"><%= User.find(z).contractor.lvl_of_exp %></td>
         <td id="border"><%= User.find(z).contractor.end_date %></td>

@@ -1,5 +1,5 @@
 class Contractor < ApplicationRecord
-  mount_uploader :photo, PictureUploader
+  # mount_uploader :photo, PictureUploader
   mount_uploader :cv, CvUploader
   belongs_to :user
 
