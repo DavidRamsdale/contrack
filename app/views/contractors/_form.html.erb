@@ -1,3 +1,15 @@
+<div class="container pt-3">
+<div class="row justify-content-sm-center">
+<div class="col-sm-6 col-md-4">
+
+<div class="card border-info text-center">
+<div class="card-header">
+Contractor
+</div>
+<div class="card-body">
+<img class="icon-login" id="center" src="/assets/contract">
+
+
 <%= form_with(model: contractor, local: true) do |form| %>
   <% if contractor.errors.any? %>
     <div id="error_explanation">
@@ -18,19 +30,10 @@
 
   <div class="field">
     <%= form.label :end_date %>
-    <%= form.date_select :end_date %>
+    <%= form.date_field :end_date %>
   </div>
 
-  <div class="field">
-    <%= form.label :current_role %>
-    <%= form.text_field :current_role %>
-  </div>
-
-  <div class="field">
-    <%= form.label :current_company %>
-    <%= form.text_field :current_company %>
-  </div>
-
+  
   <div class="field">
     <%= form.label :engineer_type %>
     <%= form.select :engineer_type, ["Front end", "Back end", "Full stack"] %>
@@ -61,26 +64,47 @@
     <%= form.check_box :available_now %>
   </div>
 
+  
+  <br />
   <div class="field">
-    <%= form.label :photo %>
+    <%#= form.label :current_role %>
+    <%= form.text_field :current_role, class: "form-control mb-2", placeholder: "Current Role" %>
+  </div>
+
+  <div class="field">
+    <%#= form.label :current_company %>
+    <%= form.text_field :current_company, class: "form-control mb-2", placeholder: "Current Company"  %>
+  </div>
+
+
+  <div class="field">
+    <%#= form.label :linkedin %>
+    <%= form.text_field :linkedin, class: "form-control mb-2", placeholder: "LinkedIn"  %>
+  </div>
+
+  <div class="field">
+    <%#= form.label :github %>
+    <%= form.text_field :github, class: "form-control mb-2", placeholder: "Github"  %>
+  </div>
+
+<div class="field">
+    <b>Photo</b><%#= form.label :photo %>
     <%= form.file_field :photo %>
   </div>
 
   <div class="field">
-    <%= form.label :cv %>
+    <b>CV</b><%#= form.label :cv %>
     <%= form.file_field :cv %>
   </div>
+  <br/>
 
-  <div class="field">
-    <%= form.label :linkedin %>
-    <%= form.text_field :linkedin %>
-  </div>
-
-  <div class="field">
-    <%= form.label :github %>
-    <%= form.text_field :github %>
-  </div>
-
-  <%= form.submit "Submit" %>
+  <%= form.submit "Submit", class: "btn btn-lg btn-primary btn-block mb-1" %>
 
 <% end %>
+
+</div>
+
+</div>
+</div>
+
+</div></div></div>
