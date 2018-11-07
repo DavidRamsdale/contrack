@@ -46,7 +46,6 @@ body{
   align-items: center;
   justify-content: center;
 }
-
 .form{
   display:grid;
   grid-template-columns: auto auto auto;
@@ -65,4 +64,20 @@ body{
 img{
   width: 100px;
   height: 100px;
+}
+#checkbox{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+} */
+
+.card {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.icon-login {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 30px;
 }
