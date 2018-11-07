@@ -21,7 +21,6 @@
 <% @user_contractors.zip(@users).each do |z, y| %>
   <tbody>
       <tr>
-      
         <td id="border"><%= image_tag z[:photo_url] if z[:photo_url] %></td>
         <td id="border"><%= y[:full_name] %></td>
         <td id="border"><%= z[:lvl_of_exp] %></td>
