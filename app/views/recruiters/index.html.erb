@@ -1,37 +1,49 @@
 <div id="recruiter">
 <h1>Recruiter's Page</h1>
 <%= form_with url: searchresults_path, method: :post, local: true do |form| %>
-  <div class="field">
+  <div class="form">
+
+  <div class="card text-white bg-primary mb-3" style="max-width: 12rem;">
     <%= form.label :engineer_type %>
     <%= form.select :engineer_type, [["Front end", 0], ["Back end", 1], ["Full stack", 2]] %>
   </div>
 
-  <div class="field">
+  <div class="card text-white bg-primary mb-3" style="max-width: 12rem;">
     <%= form.label :lvl_of_exp %>
     <%= form.select :lvl_of_exp, [["Junior", 0]  , ["Mid", 1], ["Senior", 2]] %>
   </div>
 
-  <div class="field">
+ 
+  <div class="card text-white bg-primary mb-3" style="max-width: 12rem;">
     <%= form.label :city %>
     <%= form.select :city, [["Sydney", 0], ["Melbourne", 1], ["Brisbane", 2], ["Adelaide", 3], ["Perth", 4], ["Canberra", 5], ["Hobart", 6], ["Darwin", 7]] %>
   </div>
 
-  <div class="field">
+
+
+  <div class="card text-white bg-primary mb-3" style="max-width: 12rem;">
     <%= form.label :pay_range %>
     <%= form.select :pay_range, [["0-200", 0], ["200-400", 1], ["400-600", 2], ["600-800", 3], ["800-1000", 4], ["1000+", 5]] %>
   </div>
 
-  <div class="field">
+
+
+  <div class="card text-white bg-primary mb-3" style="max-width: 12rem;">
     <%= form.label :end_date %>
     <%= form.date_field :end_date %>
   </div>
 
-  <div class="field">
+
+
+  <div class="card text-white bg-primary mb-3" style="max-width: 12rem;">
     <%= form.label :pref_contract %>
     <%= form.select :pref_contract, [["3 months", 0], ["6 months", 1], ["9 months", 2], ["12 months", 3]] %>
   </div>
-  <div id="checkbox"><%= form.collection_check_boxes :language_id, Language.all, :id, :name, include_hidden: false %></div>
-  <%= form.submit %>
+  </div>
+  <div class="checkbox">
+  <%= form.collection_check_boxes :language_id, Language.all, :id, :name, include_hidden: false %>
+  </div>
+  <%= form.submit "Search Contractors"%>
   </div>
 <% end %>
 

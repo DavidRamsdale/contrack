@@ -1,6 +1,6 @@
-
-
 <%= form_with model: @language_user, local: true do |f| %>
+<div class="checkbox">
   <%= f.collection_check_boxes :language_id, Language.all, :id, :name, include_hidden: false %>
+  </div>
   <%= f.submit %>
 <% end %>
