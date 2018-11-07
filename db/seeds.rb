@@ -20,8 +20,6 @@ Language.create([
     { name: "CSS"}
 ])
 
-
-
 500.times do 
     User.create(
     email: Faker::Internet.email,
@@ -41,7 +39,6 @@ x = 1
         pref_contract:  rand(0..3),
         will_move: Faker::Boolean.boolean,
         available_now: Faker::Boolean.boolean,
-        photo: Faker::LoremFlickr.image,
         end_date: (Time.now.to_date..Date.new(2020,1,1)).to_a.sample)
     x += 1
 end
