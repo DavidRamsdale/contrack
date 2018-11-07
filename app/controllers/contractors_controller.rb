@@ -7,6 +7,8 @@ class ContractorsController < ApplicationController
     if current_user.is_contractor == false
       redirect_to "/"
     end
+  rescue StandardError
+    redirect_to "/"
   end
 
   # GET /contractors/1

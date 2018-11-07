@@ -14,31 +14,31 @@
  *= require_self
  */
  @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
-img{
+/* img{
   width: 100px;
   height: 100px;
   border-radius: 50px;
 }
-body{
+body{ */
   /* background-color: rgb(114, 169, 206); */
-  margin: 0px;
+  /* margin: 0px;
   font-family: Playfair display;
   font-weight: bold;
-}
-.intro{
+} */
+/* .intro{
   display:flex;
   flex-direction:column;
   justify-content: center;
   align-items:center;
   font-family: Playfair display;
   font-size: 20px;
-}
+} */
 /* h1{
   font-size: 36px;
   margin:20px;
   margin-bottom: 50px;
 } */
-#border{
+/* #border{
   border: 0.1px solid;
 }
 #heading{
@@ -60,4 +60,4 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
-}
+} */
