@@ -1,10 +1,18 @@
 class RecruitersController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_recruiter, only: [:show, :edit, :update, :destroy]
-
+  # before_action :is_recruiter, only: [:index, :show, :edit, :new]
+  before_action :has_paid, only: [:index]
+  
+  before_action :validate_recruiter, only: [:show, :edit, :update, :destroy]
+  
   # GET /recruiters
   # GET /recruiters.json
   def index
     @recruiters = Recruiter.all
+  end
+
+  def payment
   end
 
   # GET /recruiters/1
@@ -14,9 +22,13 @@ class RecruitersController < ApplicationController
 
   # GET /recruiters/new
   def new
-    @recruiter = Recruiter.new
+      if current_user.recruiter == nil
+        @recruiter = Recruiter.new
+      else
+        redirect_to "/"
+      end
   end
-
+  
   # GET /recruiters/1/edit
   def edit
   end
@@ -26,10 +38,10 @@ class RecruitersController < ApplicationController
   def create
     @recruiter = Recruiter.new(recruiter_params)
     @recruiter.user_id = current_user.id
-    
+
     respond_to do |format|
       if @recruiter.save
-        format.html { redirect_to @recruiter, notice: 'Recruiter was successfully created.' }
+        format.html { redirect_to recruiterpayment_path, notice: 'Recruiter was successfully created.' }
         format.json { render :show, status: :created, location: @recruiter }
       else
         format.html { render :new }
@@ -65,11 +77,17 @@ class RecruitersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_recruiter
-      @recruiter = Recruiter.find(params[:id])
+      # @recruiter = Recruiter.find(params[:id])
+      @recruiter = current_user.recruiter
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recruiter_params
-      params.require(:recruiter).permit(:user_id, :company)
+      params.require(:recruiter).permit(:user_id, :company, :search)
+    end
+    def validate_recruiter
+      if current_user.is_contractor
+        redirect_to "/"
+      end
     end
 end

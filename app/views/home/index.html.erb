@@ -1,3 +1,11 @@
-<h1>Hey, You're on the Landing Page</h1>
 <%= link_to("Login", new_user_session_path) %>
 <%= link_to("Sign Up", new_user_registration_path) %>
+<div class="intro">
+<%= image_tag("contract", class: "icon") %>
+<h1>Welcome to Contrack!</h1>
+<p>Our goal is to connect recruiters and contractors seamlessly.</p>
+<p> We provide an environment
+that allows contractors to be seen by recruiters, and recruiters to filter potential candidates by their requirements</p>
+</div>
+
+<%# Stripe::Charge.paid() %>

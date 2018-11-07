@@ -1,0 +1,38 @@
+<div class="container pt-3">
+<div class="row justify-content-sm-center">
+<div class="col-sm-6 col-md-4">
+
+<div class="card border-info text-center">
+<div class="card-header">
+New Recruiter (2-2)
+</div>
+<div class="card-body">
+<img class="icon-login" src="/assets/contract">
+
+
+<%= form_with url: payment_path do %>
+  <article>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+    <label class="amount">
+      <span>Amount: $5.00</span>
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.application.credentials.stripe[:publishable] %>"
+          data-description="All access subscription"
+          data-amount="500"
+          data-locale="auto"
+          data-email="<%= current_user.email %>"></script>
+<% end %>
+
+</div>
+
+</div>
+</div>
+
+</div></div></div>

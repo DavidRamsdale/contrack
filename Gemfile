@@ -55,3 +55,17 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "devise", "~> 4.5"
+
+
+gem "stripe", "~> 3.29"
+
+gem "carrierwave", "~> 1.2"
+
+gem "carrierwave-aws", "~> 1.3"
+
+gem "textacular", "~> 5.1"
+
+gem "mini_magick", "~> 4.9"
+
+
+gem "faker", "~> 1.9"

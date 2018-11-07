@@ -1,4 +1,4 @@
-/*
+
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -12,4 +12,72 @@
  *
  *= require_tree .
  *= require_self
- */
+
+body{
+   margin: 0px;
+}
+ .intro{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items:center;
+  font-size: 20px;
+}
+ h1{
+  font-size: 36px;
+  margin:20px;
+  margin-bottom: 50px;
+}
+ /* #border{
+  border: 0.1px solid;
+} */
+#heading{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: rgba(27, 94, 194, 0.973);
+  margin: 0px;
+  padding: 10px;
+  color:white;
+}
+#recruiter{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+}
+.form{
+  display:grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-content:space-evenly;
+  grid-gap:30px;
+}
+.checkbox{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  align-items: center;
+  justify-content:space-around;
+  grid-gap:10px;
+}
+img{
+  width: 100px;
+  height: 100px;
+}
+#checkbox{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+} */
+
+.card {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.icon-login {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
