@@ -17,10 +17,6 @@
      <% if user_signed_in? and (current_user.recruiter != nil or current_user.contractor != nil)  %>
      <li>
      <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-     <% elsif current_user.is_contractor == false%>
-        <% if current_user.recruiter.paid == true %>
-        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-        <% end%>
      </li>
      <% end %>
      </div>

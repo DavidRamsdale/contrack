@@ -23,7 +23,7 @@
 
   <tbody>
       <tr>
-        <td><%= image_tag current_user.contractor.photo if current_user.contractor.photo %></td>
+        <td><%= image_tag current_user.contractor.photo_url if current_user.contractor.photo_url %></td>
         <td><%= current_user.contractor.user.full_name %></td>
         <td><%= current_user.contractor.lvl_of_exp %></td>
         <td><%= current_user.contractor.end_date %></td>
