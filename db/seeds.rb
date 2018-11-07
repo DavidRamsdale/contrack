@@ -22,7 +22,7 @@ Language.create([
 
 
 
-500.times do 
+50.times do 
     User.create(
     email: Faker::Internet.email,
     full_name: Faker::FunnyName.name,
@@ -31,7 +31,7 @@ Language.create([
     )
 end
 x = 1
-500.times do
+50.times do
     Contractor.create(
         lvl_of_exp: rand(0..2),
         user_id: x,
@@ -41,12 +41,12 @@ x = 1
         pref_contract:  rand(0..3),
         will_move: Faker::Boolean.boolean,
         available_now: Faker::Boolean.boolean,
-        photo: Faker::LoremFlickr.image,
+        remote_photo_url: (Faker::Avatar.image),
         end_date: (Time.now.to_date..Date.new(2020,1,1)).to_a.sample)
     x += 1
 end
 y=1
-500.times do
+50.times do
     LanguageUser.create(
     user_id: y,
     language_id: rand(1..3)
