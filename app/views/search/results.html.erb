@@ -18,23 +18,23 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-<% @end.each do |z| %>
+<% @user_contractors.zip(@users).each do |z, y| %>
   <tbody>
       <tr>
-        <td id="border"><%= image_tag User.find(z).contractor.photo_url if User.find(z).contractor.photo_url %></td>
-        <td id="border"><%= User.find(z).full_name %></td>
-        <td id="border"><%= User.find(z).contractor.lvl_of_exp %></td>
-        <td id="border"><%= User.find(z).contractor.end_date %></td>
-        <td id="border"><%= User.find(z).contractor.current_role %></td>
-        <td id="border"><%= User.find(z).contractor.current_company %></td>
-        <td id="border"><%= User.find(z).contractor.engineer_type %></td>
-        <td id="border"><%= User.find(z).contractor.city %></td>
-        <td id="border"><%= User.find(z).contractor.pay_range %></td>
-        <td id="border"><%= User.find(z).contractor.pref_contract %></td>
-        <td id="border"><%= User.find(z).contractor.available_now %></td>
-        <td id="border"><a target="_blank" href="<%=User.find(z).contractor.cv%>">View CV</a></td>
-        <td id="border"><%= User.find(z).contractor.linkedin %></td>
-        <td id="border"><%= User.find(z).contractor.github %></td>
+        <td id="border"><%= image_tag z[:photo_url] if z[:photo_url] %></td>
+        <td id="border"><%= y[:full_name] %></td>
+        <td id="border"><%= z[:lvl_of_exp] %></td>
+        <td id="border"><%= z[:end_date] %></td>
+        <td id="border"><%= z[:current_role] %></td>
+        <td id="border"><%= z[:current_companyz] %></td>
+        <td id="border"><%= z[:engineer_type] %></td>
+        <td id="border"><%= z[:city] %></td>
+        <td id="border"><%= z[:pay_range] %></td>
+        <td id="border"><%= z[:pref_contract] %></td>
+        <td id="border"><%= z[:available_now] %></td>
+        <td id="border"><a target="_blank" href="<%=z[:cv]%>">View CV</a></td>
+        <td id="border"><%= z[:linkedin] %></td>
+        <td id="border"><%= z[:github] %></td>
       </tr>
   </tbody>
 <% end %>

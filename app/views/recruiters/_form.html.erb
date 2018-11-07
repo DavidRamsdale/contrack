@@ -1,3 +1,14 @@
+<div class="container pt-3">
+<div class="row justify-content-sm-center">
+<div class="col-sm-6 col-md-4">
+
+<div class="card border-info text-center">
+<div class="card-header">
+New Recruiter (1-2)
+</div>
+<div class="card-body">
+<img class="icon-login" src="/assets/contract">
+
 <%= form_with(model: recruiter, local: true) do |form| %>
   <% if recruiter.errors.any? %>
     <div id="error_explanation">
@@ -13,11 +24,18 @@
 
 
   <div class="field">
-    <%= form.label :company %>
-    <%= form.text_field :company %>
+    <%#= form.label :company %>
+    <%= form.text_field :company, class: "form-control mb-2", placeholder: "Company" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Create", class: "btn btn-lg btn-primary btn-block mb-1" %>
   </div>
 <% end %>
+
+</div>
+
+</div>
+</div>
+
+</div></div></div>

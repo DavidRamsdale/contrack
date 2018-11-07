@@ -20,8 +20,6 @@ Language.create([
     { name: "CSS"}
 ])
 
-
-
 50.times do 
     User.create(
     email: Faker::Internet.email,
