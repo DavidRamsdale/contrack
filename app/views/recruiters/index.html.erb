@@ -17,19 +17,10 @@
   </div>
 
   <div class="field">
-    <%= form.label :pay_range %>
-    <%= form.select :pay_range, [["0-200", 0], ["200-400", 1], ["400-600", 2], ["600-800", 3], ["800-1000", 4], ["1000+", 5]] %>
-  </div>
-
-  <div class="field">
-    <%= form.label :end_date %>
+    <%= form.label :start_date %>
     <%= form.date_field :end_date %>
   </div>
 
-  <div class="field">
-    <%= form.label :pref_contract %>
-    <%= form.select :pref_contract, [["3 months", 0], ["6 months", 1], ["9 months", 2], ["12 months", 3]] %>
-  </div>
   <div id="checkbox"><%= form.collection_check_boxes :language_id, Language.all, :id, :name, include_hidden: false %></div>
   <%= form.submit %>
   </div>
