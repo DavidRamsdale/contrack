@@ -71,4 +71,8 @@ The problem we are trying to solve by building this marketplace App is; as infor
 
 ### 3. Describe the project you will be conducting and how your App will address the needs. ###
 
-The project we’ve undertaken will be giving recruiters access to our database, which contains relevant information about contractors and their end dates. Currently they have to contact candidates regarding when they will finish their contracts. 
+The project we’ve undertaken will be giving recruiters access to our database, which contains relevant information about contractors and their end dates. Currently they have to contact candidates regarding when they will finish their contracts.
+
+### 4. Describe the network infrastructure the App may be based on. ###
+
+The network infrastructure our App is based on includes; Ruby On Rails, for our production of the application. Rails is a framework that uses the MVC structure to connect our database, logic and displays. AWS, to store files related to our contractors. Stripe for our payment system. This outsources our security concerns when handling vulnerable customer payment information. Heroku as our web server. This makes our website available for people to view and also automatically provides a DNS for us.  
