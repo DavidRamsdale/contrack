@@ -101,3 +101,52 @@ We used AWS for it’s cloud structure which allows for storage of user files se
 
 We used Textacular to assist with our searching procedures, it allows for efficient database queries with simple commands.
 
+### 9. Explain the different high-level components (abstractions) in your App. ###
+
+MVC is connected through a naming convention. The model always has to be singular where as the related View and Controller has to be plural.  
+
+### 10. Detail any third party services that your App will use. ###
+
+AWS for storing our files in the cloud, Stripe for payment methods , HEROKU for web server application, Device for authentication, CarrierWave for uploader and Textacular for search functions. 
+
+### 11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb). ###
+
+LINKEDIN - is a network based platform that lists both job seekers and currently employed individuals and their CV information. This allows recruiters and employers to search through the database of individuals, and individuals to connect to their network of 
+
+### 12. Discuss the database relations to be implemented. ###
+
+We choose to seperate the models for users, contractors, recruiters and languages as its is a logical way to seperate our data, this also makes it more efficient while searching the Database. friends, business contacts and influencers.
+
+### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other. ###
+
+The Database relations to be implemented  join-table , many to many, one to many, belongs to and type. 
+
+### 14. Provide your database schema design. ###
+
+### 15. Provide User stories for your App. ###
+
+1. As a recruiter, I would like to search up contractors based on their end dates.
+
+2. As a contractor, I would like to upload my informations for recruiters to find me. 
+
+3. As a contractor, I would like to edit my information at will. 
+
+4. As a contractor, I would like to find a recruiter who suits my time frame and tech skills.
+
+5. As a recruiter, I would like to see contractors based on their expected pay range. 
+
+6. As a recruiter, I would like to view searches of the contractors to be sorted by the end date.
+
+### 16. Provide Wireframes for your App. ###
+
+### 17. Describe the way tasks are allocated and tracked in your project. ###
+
+Trello and Group Stand ups in the morning to track where everyone is at in terms of their works and also set goals for the day. 
+
+
+
+
+
+
+
+
