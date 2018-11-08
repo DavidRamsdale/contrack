@@ -20,7 +20,8 @@
  .app-container {
     background-image: image-url("contrack-background.png");
     background-size: cover;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    height: 80vh;
  }
 body{
    margin: 0px;

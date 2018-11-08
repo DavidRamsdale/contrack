@@ -7,8 +7,7 @@
 Contractor
 </div>
 <div class="card-body">
-<img class="icon-login" id="center" src="/assets/contract">
-
+<%= image_tag "contract.jpg", class: "icon-login", id: "center" %>
 
 <%= form_with(model: contractor, local: true) do |form| %>
   <% if contractor.errors.any? %>
