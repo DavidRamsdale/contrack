@@ -23,7 +23,7 @@ Language.create([
     { name: "SQL"},
     { name: "Bash"}])
 
-1000.times do 
+10.times do 
     User.create(
     email: Faker::Internet.email,
     full_name: Faker::FunnyName.name,
@@ -32,7 +32,7 @@ Language.create([
     )
 end
 x = 1
-1000.times do
+10.times do
     Contractor.create(
         lvl_of_exp: rand(0..2),
         user_id: x,
@@ -49,7 +49,7 @@ x = 1
     x += 1
 end
 y=1
-1000.times do
+10.times do
     LanguageUser.create(
     user_id: y,
     language_id: rand(1..3)
