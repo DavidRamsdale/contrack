@@ -2,7 +2,7 @@
 
 ## Live-app: ##
 
-markup : Table of contents
+## Table of contents ##
 * About
 * Features
 * Installation & Setup
@@ -15,9 +15,28 @@ markup : Table of contents
 
 ## About ##
 
-## Features ##
+The need we are addressing in our project is to assist recruiters in determining when currently contracted workers finish their contracts, based upon their end dates. This is not currently the feature of The major platforms including LinkedIN..etc. 
 
+## Features ##
+* Authenticate and authorise users.
+* Recruiters can search contractor information with filtering system.
+* Search results are sorted by end-date.
+* Allowing Contractors to upload files 
+ 
 ## Installation & Setup ##
+Clone our application to your local machine.
+
+You will then need to open the command line directory on the applicaiton and install all of the libraries:
+* bundle install
+
+Creating the database is the next step:
+* rails db:create
+
+we then migrate the database:
+* rails db:migrate
+
+Lastly run the server
+* rails s
 
 ## Project Manangement ##
 
