@@ -182,6 +182,8 @@ We used Git and Github for our source control process. We created a development 
 
 ### 20. Provide an overview and description of your Testing process. ###
 
+[Test sheet](https://docs.google.com/spreadsheets/d/1UvhEQiCZ4qyBGjsIGCwd7LcHBRQeiqijCfDAidRUrHo/edit#gid=0)
+
 ### 21. Discuss and analyse requirements related to information system security. ###
 
 In terms of the server, we have used Heroku, which provides server using Https. We employed Devise Gem in order to encrypt and store user passwords. We use Stripe as a payment method, thus we don’t have to store credit card informations.
