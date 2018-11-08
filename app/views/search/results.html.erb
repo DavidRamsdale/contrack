@@ -6,6 +6,7 @@
       <th></th>
       <th>Name</th>
       <th>Experience Level</th>
+      <th>End date</th>
       <th>Current role</th>
       <th>Current company</th>
       <th>Engineer type</th>
@@ -13,17 +14,17 @@
       <th>Pay range</th>
       <th>Preferred contract</th>
       <th>Available now</th>
-      <th>End date</th>
       <th>Cv</th>
       <th colspan="3"></th>
     </tr>
   </thead>
-<% @user_contractors.zip(@users).each do |z, y| %>
+<% @user_contractors.each do |z| %>
   <tbody>
       <tr>
         <td id="border"><%= image_tag z.photo_url if z.photo_url %></td>
-        <td id="border"><%= y[:full_name] %></td>
+        <td id="border"><%= z.user.full_name %></td>
         <td id="border"><%= z[:lvl_of_exp] %></td>
+        <td id="border"><%= z[:end_date] %></td>
         <td id="border"><%= z[:current_role] %></td>
         <td id="border"><%= z[:current_companyz] %></td>
         <td id="border"><%= z[:engineer_type] %></td>
@@ -31,7 +32,6 @@
         <td id="border"><%= z[:pay_range] %></td>
         <td id="border"><%= z[:pref_contract] %></td>
         <td id="border"><%= z[:available_now] %></td>
-        <td id="end_date"><%= z[:end_date] %></td>
         <td id="border"><a target="_blank" href="<%=z[:cv]%>">View CV</a></td>
         <td id="border"><%= z[:linkedin] %></td>
         <td id="border"><%= z[:github] %></td>

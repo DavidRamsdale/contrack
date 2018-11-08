@@ -1,11 +1,48 @@
-<%= link_to("Login", new_user_session_path) %>
-<%= link_to("Sign Up", new_user_registration_path) %>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,900');
+
+body {
+   background-image: url("/assets/contrack-background.png");
+   background-size: cover;
+   background-repeat: no-repeat
+}
+</style>
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+  <a class="navbar-brand" href="#">
+    <%# <img src="/assets/astronaut" id="contrackhome" class="d-inline-block align-top" alt=""> %>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+
+  </button>
+  <div class="collapse navbar-collapse " id="navbarNav">
+ 
+    <ul class="navbar-nav">
+     <div id="homelogin">
+      <li class="nav-item active">
+      <div id="link">   
+        <%= link_to("Login", new_user_session_path, class: "btn btn-primary" ) %>
+        </div>
+      </li>
+      <li class="nav-item">
+      <div id="link">  
+     <%= link_to("Sign Up", new_user_registration_path, class: "btn btn-primary" ) %>
+     </div>
+      </li>
+      </div>
+    </ul>
+    
+    </div>
+  <%# </div> %>
+</nav>
+
 <div class="intro">
-<%= image_tag("contract", class: "icon") %>
+<br>
+
 <h1>Welcome to Contrack!</h1>
 <p>Our goal is to connect recruiters and contractors seamlessly.</p>
 <p> We provide an environment
 that allows contractors to be seen by recruiters, and recruiters to filter potential candidates by their requirements</p>
 </div>
-
 <%# Stripe::Charge.paid() %>
