@@ -16,13 +16,14 @@
 
 ## About ##
 
-The need we are addressing in our project is to assist recruiters in determining when currently contracted workers finish their contracts, based upon their end dates. This is not currently the feature of The major platforms including LinkedIN..etc. 
+Our Rails Application, named "Contrack", is designed to function as a uniting point between recruiters and contractors. It's purpose is to allow recruiters to access a large database of contractors, viewing their current role, company and contract end-date, and providing a means to contact them. Contractors are incentivised to join so that they can be seen by potential recruiters looking to hire, and potentially fill another contract.
 
 ## Features ##
 * Authenticate and authorise users.
 * Recruiters can search contractor information with filtering system.
 * Search results are sorted by end-date.
-* Allowing Contractors to upload files 
+* Allowing Contractors to upload personal information and files(photo, cv)
+
  
 ## Installation & Setup ##
 Clone our application to your local machine.
