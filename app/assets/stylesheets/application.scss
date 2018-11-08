@@ -22,7 +22,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    // width: 100vw;
  }
 body{
    margin: 0px;
@@ -32,22 +31,18 @@ body{
   flex-direction:column;
   justify-content: center;
   align-items: flex-start;
-  font-size: 15px;
+  font-size: 30px;
   width: 600px;
   color: white;
   padding-left: 70px;
   font-family: 'Raleway', sans-serif;
-  font-weight: 400
 }
- h1{
+ #homepage-heading{
   font-size: 75px;
   margin: 10px;
   margin-bottom: 50px;
   font-family: 'Alfa Slab One', cursive;
 }
- /* #border{
-  border: 0.1px solid;
-} */
 #heading{
   display:flex;
   justify-content:center;
@@ -137,4 +132,18 @@ font-weight: bold;
 
 .backgroundhome {
   background-image: url("http://conferences.unicom.co.uk/skills-forum/wp-content/uploads/2016/07/shutterstock_376443139-2.png")
+}
+#label{
+  font-weight: bold;
+}
+#lang-user-heading{
+  text-align: center;
+}
+#lang-button{
+  margin-left:50%;
+  margin-top: 90px;
+}
+#lang-container{
+  background: #1D99B3;
+
 }
