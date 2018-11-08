@@ -40,7 +40,14 @@ Lastly run the server
 
 ## Project Manangement ##
 
+## Wireframe ##
+![Wireframe1](https://i.imgur.com/VAT2W0q.jpg)
+![Wireframe2](https://i.imgur.com/cgXXedQ.jpg)
+
+
+
 ## User Flow ##
+![Userflow](https://i.imgur.com/bRwe3j3.jpg)
 
 ## User Stories ##
 
