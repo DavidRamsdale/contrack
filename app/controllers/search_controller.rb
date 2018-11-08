@@ -9,7 +9,6 @@ class SearchController < ApplicationController
     end
     @result = @array.inject(:&)
     @end = @search_with_date & @result
-    @user_contractors = Contractor.where(user_id: @end).order(:end_date).reverse.uniq
+    @user_contractors = Contractor.where(user_id: @end).order(:end_date).reverse
   end
 end
-
