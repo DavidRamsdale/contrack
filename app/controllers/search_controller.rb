@@ -8,8 +8,12 @@ class SearchController < ApplicationController
     end
     @result = @array.inject(:&)
     @end = @search_with_date & @result
+    byebug
+    if @end != nil
     @users = User.includes(:contractor).where(id: @end).references(:contractor).order('contractors.end_date').reverse
     @user_contractors = Contractor.where(user_id: @end).order(:end_date).reverse
+    else
+      redirect_to "/"
+    end
   end
 end
-

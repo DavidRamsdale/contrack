@@ -85,3 +85,14 @@ img{
 color:red;
 font-weight: bold;
 }
+.logo{
+  height:40px;
+  width:40px;
+}
+#logout{
+  display:flex;
+  justify-content: flex-end;
+  align-items: end;
+  margin:10px
+
+}

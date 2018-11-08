@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Your Profile</h1>
+<h1>As Seen by Recruiters</h1>
 
-<table>
-  <thead>
+<table class="table table-bordered table-secondary">
+ <thead class="thead-dark">
     <tr>
       <th></th>
       <th>Name</th>
@@ -35,10 +35,10 @@
         <td><%= current_user.contractor.pref_contract %></td>
         <td><%= current_user.contractor.available_now %></td>
         <td><a target="_blank" href="<%=current_user.contractor.cv%>">View CV</a></td>
-        <td><%= current_user.contractor.linkedin %></td>
-        <td><%= current_user.contractor.github %></td>
-        <td><%= link_to 'Edit', edit_contractor_path(current_user.contractor) %></td>
-        <td><%= link_to 'Delete Account', current_user.contractor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= image_tag current_user.contractor.linkedin, class: "logo" if current_user.contractor.linkedin%></td>
+        <td><%= image_tag current_user.contractor.github, class: "logo" if current_user.contractor.github %></td>
+        <td><%= link_to 'Edit', edit_contractor_path(current_user.contractor) %>
+        <%= link_to 'Delete Account', current_user.contractor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
   </tbody>
 </table>
