@@ -87,12 +87,12 @@ Contractor
   </div>
 
 <div class="field">
-    <b>Photo</b><%#= form.label :photo %>
+    <%= form.label :photo, id: "label" %>
     <%= form.file_field :photo %>
   </div>
 
   <div class="field">
-    <b>CV</b><%#= form.label :cv %>
+    <%= form.label :cv, id: "label" %>
     <%= form.file_field :cv %>
   </div>
   <br/>

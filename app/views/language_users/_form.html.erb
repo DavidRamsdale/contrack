@@ -2,5 +2,5 @@
 <div class="checkbox">
   <%= f.collection_check_boxes :language_id, Language.all, :id, :name, include_hidden: false %>
   </div>
-  <%= f.submit %>
+  <%= f.submit "Submit Languages", id: "lang-button" %>
 <% end %>

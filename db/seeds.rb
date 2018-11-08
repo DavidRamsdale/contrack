@@ -17,10 +17,13 @@ Language.create([
     { name: "C#"},
     { name: "Rust"},
     { name: "HTML"},
-    { name: "CSS"}
-])
+    { name: "CSS"},
+    { name: "C++"},
+    { name: "C"},
+    { name: "SQL"},
+    { name: "Bash"}])
 
-50.times do 
+1000.times do 
     User.create(
     email: Faker::Internet.email,
     full_name: Faker::FunnyName.name,
@@ -29,7 +32,7 @@ Language.create([
     )
 end
 x = 1
-50.times do
+1000.times do
     Contractor.create(
         lvl_of_exp: rand(0..2),
         user_id: x,
@@ -37,6 +40,8 @@ x = 1
         city: rand(0..7),
         pay_range: rand(0..5),
         pref_contract:  rand(0..3),
+        current_role: Faker::Hacker.verb,
+        current_company: Faker::Company.name,
         will_move: Faker::Boolean.boolean,
         available_now: Faker::Boolean.boolean,
         remote_photo_url: (Faker::Avatar.image),
@@ -44,20 +49,20 @@ x = 1
     x += 1
 end
 y=1
-50.times do
+1000.times do
     LanguageUser.create(
     user_id: y,
     language_id: rand(1..3)
     )
 
     LanguageUser.create(
-    user_id: rand(1..100),
+    user_id: rand(1..1000),
     language_id: rand(4..8)
     )
 
     LanguageUser.create(
-    user_id: rand(1..100),
-    language_id: rand(9..11)
+    user_id: rand(1..1000),
+    language_id: rand(9..15)
     )
     y += 1
 end
