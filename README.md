@@ -143,10 +143,23 @@ The Database relations to be implemented  join-table , many to many, one to many
 
 Trello and Group Stand ups in the morning to track where everyone is at in terms of their works and also set goals for the day. 
 
+### 18. Discuss how Agile methodology is being implemented in your project. ###
+Trello has been efficiently implemented in order to escalate our productivity and also to inculcate the visual aspect of our progress. The verbal interaction to keep the track of our progress and set daily tasks of our project. These method we implemented were quite productive in managing tasks in our projects.
 
+### 19. Provide an overview and description of your Source control process. ###
+      
+We used Git and Github for our source control process. We created a development branch from the master as a good practice to make sure we could test new features without interfering with the master branch. We each then created a branch from development so we could work independently on our designated tasks. When our individual work was completed we would then pull it into the development branch. Merge conflicts were solved on GitHub by comparing the code that we were trying to pull into development with the work we’d done on our branch. 
 
+### 20. Provide an overview and description of your Testing process. ###
 
+### 21. Discuss and analyse requirements related to information system security. ###
 
+In terms of the server, we have used Heroku, which provides server using Https. We employed Devise Gem in order to encrypt and store user passwords. We use Stripe as a payment method, thus we don’t have to store credit card informations.
 
+### 22. Discuss methods you will use to protect information and data. ###
+
+We used the devise Gem to protect user passwords by using Bcrypt to encrypt their passwords once they are created and store in that encrypted information. Heroku is the server we have chosen to use for hosting our website, it provides us with a secure server for our customers to use.  We designated Stripe as our a payment method, it assists us getting payments with out attaining card informations.
+
+### 23. Research what your legal obligations are in relation to handling user data. ###
 
 
