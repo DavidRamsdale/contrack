@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
 
+ @import url('https://fonts.googleapis.com/css?family=Raleway:400,900');
+ @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
+
+
 body{
    margin: 0px;
 }
@@ -20,13 +24,19 @@ body{
   display:flex;
   flex-direction:column;
   justify-content: center;
-  align-items:center;
-  font-size: 20px;
+  align-items: flex-start;
+  font-size: 15px;
+  width: 600px;
+  color: white;
+  padding-left: 70px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400
 }
  h1{
-  font-size: 36px;
-  margin:20px;
+  font-size: 75px;
+  margin: 10px;
   margin-bottom: 50px;
+  font-family: 'Alfa Slab One', cursive;
 }
  /* #border{
   border: 0.1px solid;
@@ -84,4 +94,29 @@ img{
 #end_date{
 color:red;
 font-weight: bold;
+}
+
+#navbarNav {
+  justify-content: flex-end;
+  align-items: space-around;
+}
+
+#homelogin {
+  display: flex;
+}
+#link {
+  margin:10px;
+}
+
+.alert {
+  display: none;
+}
+
+#contrackhome {
+  height: 30px;
+  width: 30px
+}
+
+.backgroundhome {
+  background-image: url("http://conferences.unicom.co.uk/skills-forum/wp-content/uploads/2016/07/shutterstock_376443139-2.png")
 }
