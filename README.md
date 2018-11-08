@@ -44,7 +44,8 @@ Lastly run the server
 ![Wireframe1](https://i.imgur.com/VAT2W0q.jpg)
 ![Wireframe2](https://i.imgur.com/cgXXedQ.jpg)
 
-
+## ERD ##
+![ERD](https://i.imgur.com/gj44S1i.jpg)
 
 ## User Flow ##
 ![Userflow](https://i.imgur.com/bRwe3j3.jpg)
