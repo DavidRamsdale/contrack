@@ -149,7 +149,25 @@ We choose to seperate the models for users, contractors, recruiters and language
 
 ### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other. ###
 
-The Database relations to be implemented  join-table , many to many, one to many, belongs to and type. 
+Users: 
+  has_one :contractor
+  has_one :recruiter
+  has_many :language_users
+  has_many :languages, through: :language_users, dependent: :destroy 
+  
+Contractor:
+  belongs_to :user
+
+Recruiter: 
+  belongs_to :user
+  
+languages:
+  has_many :language_users
+  has_many :users, through: :language_users
+ 
+language_users:
+ belongs_to :user
+ belongs_to :language
 
 ### 14. Provide your database schema design. ###
 
@@ -168,6 +186,9 @@ The Database relations to be implemented  join-table , many to many, one to many
 6. As a recruiter, I would like to view searches of the contractors to be sorted by the end date.
 
 ### 16. Provide Wireframes for your App. ###
+
+![Wireframe1](https://i.imgur.com/VAT2W0q.jpg)
+![Wireframe2](https://i.imgur.com/cgXXedQ.jpg)
 
 ### 17. Describe the way tasks are allocated and tracked in your project. ###
 
