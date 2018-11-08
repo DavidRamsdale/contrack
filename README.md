@@ -171,6 +171,7 @@ language_users:
  belongs_to :language
 
 ### 14. Provide your database schema design. ###
+![ERD](https://i.imgur.com/gj44S1i.jpg)
 
 ### 15. Provide User stories for your App. ###
 
