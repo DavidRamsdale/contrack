@@ -193,27 +193,43 @@ language_users:
 
 ### 17. Describe the way tasks are allocated and tracked in your project. ###
 
-Trello and Group Stand ups in the morning to track where everyone is at in terms of their works and also set goals for the day. 
+Trello keeps track of our segmented tasks and as each one is completed it's placed into the completed list.
+In our morning group stand-ups we discuss areas of strength we each feel we have and allocate work to each person based on these self-evalued criteria. We also use these to track where everyone is at in terms of their work and also set goals for the day.
+
 
 ### 18. Discuss how Agile methodology is being implemented in your project. ###
-Trello has been efficiently implemented in order to escalate our productivity and also to inculcate the visual aspect of our progress. The verbal interaction to keep the track of our progress and set daily tasks of our project. These method we implemented were quite productive in managing tasks in our projects.
+Trello has been efficiently implemented in order to escalate our productivity and also to inculcate the visual aspect of our progress. 
+  We had verbal interaction each day through a morninng stand-up in order to keep the track of our progress and set daily tasks. 
+  These methods we implemented proved to be very productive in managing our project.
 
 ### 19. Provide an overview and description of your Source control process. ###
       
-We used Git and Github for our source control process. We created a development branch from the master as good practice, to make sure we could test new features without interfering with the master branch. We each then created a branch from development so we could work independently on our designated tasks. When our individual work was completed we would then pull it into the development branch. Merge conflicts were solved on GitHub by comparing the code that we were trying to pull into development with the work we’d done on our branch. 
+We used Git and Github for our source control process. We created a development branch from the master as good practice, to make sure we could test new features without interfering with the master branch.
+
+We each then created a branch from development so we could work independently on our designated tasks. 
+
+When our individual work was completed we would then pull it into the development branch.
+
+Merge conflicts were solved on GitHub by comparing the code that we were trying to pull into development with the work we’d done on our branch. 
 
 ### 20. Provide an overview and description of your Testing process. ###
 
+We troubleshooted potential bugs through requiring others in the group to test the code we'd done individually.
+We then filled in this spreadsheet to display what we expected versus what the test had actually resulted in.
 [Test sheet](https://docs.google.com/spreadsheets/d/1UvhEQiCZ4qyBGjsIGCwd7LcHBRQeiqijCfDAidRUrHo/edit#gid=0)
+
 
 ### 21. Discuss and analyse requirements related to information system security. ###
 
-In terms of the server, we have used Heroku, which provides a secure server using Https. We employed the Devise Gem in order to encrypt and store user passwords.
-We use Stripe as our payment method, thus we don’t have to store sensitive credit card information.
+In terms of the server, we have used Heroku, which provides a secure server using HTTPS.
+We employed the Devise Gem in order to encrypt and store user passwords.
+We used Stripe as our payment method, thus we don’t have to store sensitive credit card information.
 
 ### 22. Discuss methods you will use to protect information and data. ###
 
-We used the devise Gem to protect user passwords by using Bcrypt to encrypt their passwords once they are created and store in that encrypted information. Heroku is the server we have chosen to use for hosting our website, it provides us with a secure server for our customers to use.  We designated Stripe as our a payment method, it assists us getting payments with out attaining card informations.
+We used the devise Gem to protect user passwords. It's use of Bcrypt to encrypt customers passwords once they are created and store that encrypted information makes it certain that if the database is breached that passowrds won't be leaked.
+Heroku is the server we have chosen to use for hosting our website, it provides us with a secure server for our customers to use.  
+We designated Stripe as our a payment method, it assists us getting payments without attaining card informations.
 
 ### 23. Research what your legal obligations are in relation to handling user data. ###
 We are collecting sensitive data entered by our customers. This sensitive data includes customers full names, emails, passwords, current career information, location and links to private social websites. 
