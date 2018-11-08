@@ -50,6 +50,9 @@ Lastly run the server
 ## User Flow ##
 ![Userflow](https://i.imgur.com/bRwe3j3.jpg)
 
+## Trello ##
+![Trello](https://i.imgur.com/i00w917.jpg)
+
 ## User Stories ##
 
 * As a recruiter, I would like to search up contractors based on their end dates.
