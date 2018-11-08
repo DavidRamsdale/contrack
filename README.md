@@ -94,15 +94,17 @@ Lastly run the server
 
 ### 1. What is the need (i.e. challenge) that you will be addressing in your project? ###
    
-The need we are addressing in our project is to assist recruiters in determining when currently contracted workers finish their contracts, based upon their end dates. This is not currently the feature of The major platforms including LinkedIN..etc. 
+The need we are addressing in our project, is to assist recruiters in determining when currently contracted workers finish their contracts, based upon their contract end-date. This is not currently a feature of other major job-seeking/recruitement platforms such as LinkedIN,Seek, Indeed..etc.
+ We also will provide free sign-up for contractors who want to submit their skills and contract information, in order to entice as many people as we can to fill our database. We believe this will create a rich database pool of contractors for recruiters trying to find the perfect candidate.
 
 ### 2. Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving? ###
   
-The problem we are trying to solve by building this marketplace App is; as information about contact timeline and skill levels of workers are not generally available on other platforms, we will be linking the recruiters with Web Developers and Software Programmers.
+The problem we are trying to solve by building this marketplace App is; as information about contractors timeline and skill levels of workers are not generally available on other platforms, we will be linking the recruiters with Web Developers and Software Programmers.
 
 ### 3. Describe the project you will be conducting and how your App will address the needs. ###
 
 The project we’ve undertaken will be giving recruiters access to our database, which contains relevant information about contractors and their end dates. Currently they have to contact candidates regarding when they will finish their contracts.
+Contractors can easily sign-up and enter their details into our database for free, which provides an incentive to draw them to our website.
 
 ### 4. Describe the network infrastructure the App may be based on. ###
 
@@ -114,7 +116,7 @@ The software to be used in our App is Ruby on Rails, which has a lot of magic be
 
 ### 6. Identify the database to be used in your App and provide a justification for your choice. ###
 
-The Database to be used in our App is PostgreSQL. We use this because it has a lot of advantages. Its an Object-Relational Database, arrays of datas can be stored for most of the Data types, it has an optimal functional scalability and its an open source database. 
+The Database to be used in our App is PostgreSQL. We use this because it has a lot of advantages. Its an Object-Relational Database, arrays of data can be stored for most of the Data types, it has functional scalability and is also an open source database. 
 
 ### 7. Identify and describe the production database setup (i.e. postgres instance). ###
 
@@ -138,15 +140,20 @@ MVC is connected through a naming convention. The model always has to be singula
 
 ### 10. Detail any third party services that your App will use. ###
 
-AWS for storing our files in the cloud, Stripe for payment methods , HEROKU for web server application, Device for authentication, CarrierWave for uploader and Textacular for search functions. 
+AWS is used for storing our files in the cloud. This makes sure our images will always appear, instead of relying upon url's which could be taken down and result in an image failing to load.
+Stripe for payment methods, which abstracts away our resposibility to secure customer payment information through a proven and trusted system. 
+Heroku for web server application, providing a secure environment using HTTPS for our application to run on
+Devise gem for authentication, which encrypts user passwords.
+CarrierWave gem for uploading to our AWS through an efficient rails structure.
+Textacular for search functions, making our search queries more readable and dry. 
 
 ### 11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb). ###
 
-LINKEDIN - is a network based platform that lists both job seekers and currently employed individuals and their CV information. This allows recruiters and employers to search through the database of individuals, and individuals to connect to their network of 
+LINKEDIN - is a network based platform that lists both job seekers and currently employed individuals and their CV information. This allows recruiters and employers to search through the database of individuals, and individuals to connect to their network of contacts.
 
 ### 12. Discuss the database relations to be implemented. ###
 
-We choose to seperate the models for users, contractors, recruiters and languages as its is a logical way to seperate our data, this also makes it more efficient while searching the Database. friends, business contacts and influencers.
+We choose to seperate the models for users, contractors, recruiters and languages as its is a logical way to seperate our data, this also makes it more efficient while searching the Database. We needed to create a join table between languages and users, as a language has many users, and a user can have many languages. 
 
 ### 13. Describe your project’s models in terms of the relationships (active record associations) they have with each other. ###
 
